@@ -1,0 +1,106 @@
+/*  translate page */
+body{
+    background-color: #ef8172;
+    color: white;
+    text-align: center;
+}
+.container {
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    /* right: 10%; */
+    left: 10%;
+    align-items: center;
+    margin-right: 13rem;
+
+}
+
+textarea {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    /* text-align: center; */
+}
+
+.flex-1 {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-2 {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mic {
+
+    font-size: 2rem;
+    /* background-color: grey; */
+}
+
+
+.fa-microphone {
+    border-radius: 10%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 100%;
+    margin: 2rem;
+}
+.fa-microphone:hover{
+    transform: scale(1.2);
+}
+.fa-microphone-slash{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 50%;
+    margin: 2rem;
+    color: red;
+    /* margin-left: 1rem; */
+    
+}
+.fa-microphone-slash:hover{
+    transform: scale(1.2);
+}
+
+.speak-type {
+    margin-right: 7rem;
+    margin-bottom: 2rem;
+}
+
+.choose_file {
+    visibility: hidden;
+    position: absolute;
+    left: 75rem;
+}
+
+.submitButton {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    background: #2e2e2e;
+    padding: 10px 55px 10px 55px;
+    text-decoration: none;
+    
+  }
+  
+  .submitButton:hover {
+    background: #545454;
+    text-decoration: none;
+  }
+
+  .btn_translate {
+    max-width: 16rem;
+    margin-top: 2rem;
+  }
+
+  .visualizer {
+    height: 80px;
+    width: 800px;
+    /* background-color: #2ed99a; */
+  }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ToText/translate</title>
+
+		<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+		<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet" />
+		<!-- icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/translatecss.css"> -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='CSS/translatecss.css') }}" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<a class="navbar-brand brand-name" href="/">To Text Translator</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</nav>
+		</div>
+
+		<div class="container row feature-row">
+			<h1>Speak/Type</h1>
+			<div class="flex-1 col-lg-6 col-md-12">
+				<textarea name="" id="temp" cols="50" rows="10">{{ transcript }}</textarea>
+			</div>
+
+			<section class="main-controls">
+				<canvas class="visualizer"></canvas>
+				<div id="buttons">
+					<a class="mic" id="action"><i class="fa-solid fa-microphone"></i></a>
+					<a class="mic" id="action1"><i class="fa-solid fa-microphone-slash"></i></a>
+				</div>
+			</section>
+
+			<!-- <section class="sound-clips"></section> -->
+			<!-- <div>
+				<a class="mic" id="action"><i class="fa-solid fa-microphone"></i></a>
+				<a class="mic" id="action1"><i class="fa-solid fa-microphone-slash"></i></a>
+			</div> -->
+			<!-- <ol id="recordingsList"></ol> -->
+			<form method="post" enctype="multipart/form-data" id="file_input" action="/translate">
+				<input type="file" name="file" class="choose_file" id="file_i" />
+				<input type="submit" id="submitButton" class="submitButton" value="Transcribe" />
+			</form>
+			<button class="btn_translate submitButton" id="btn_translate" >Translate</button>
+			<!-- <form action="/translator">
+                <input type="text" value={{transcript}}>
+                <button type="submit">Translate Text</button>
+            </form> -->
+
+			<!-- <h1>Translated Text</h1>
+            <div class="flex-2 col-lg-6 col-md-12">
+            <textarea name="" id="" cols="50" rows="10"></textarea>
+            </div>  -->
+
+			<!-- <div id="speechTranscriptContainer">
+                <h1>Results</h1>
+                <p id="speechText">{{ transcript }}</p>
+            </div> -->
+		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	</body>
+	<!-- <script src="js\Translate.js"></script>
+<script src="js\WebAudioRecorder.min.js"></script>
+<script src="js\WebAudioRecorderWav.min.js"></script> -->
+
+	<!-- <script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/WebAudioRecorderWav.min.js') }}"></script> -->
+	<script src="{{ url_for('static', filename='js/Translate.js') }}"></script>
+</html>

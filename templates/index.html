@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>To Text</title>
+    <!-- bootstrap scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}"/>
+
+
+</head>
+
+<body>
+
+    <section id="title">
+
+
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark  ">
+                <a class="navbar-brand brand-name" href="">To Text</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link " href="translate.html">Translator</a> -->
+                            <a class="nav-link " href="translate">Speech2Text</a>
+                            <!-- <a class="nav-link " href="{{ url_for('static', filename='translate.html') }}">Translator</a> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="translator">Translator</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="#footer">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="#feedback">FeedBack</a>
+                        </li>
+                        <ul>
+                </div>
+            </nav>
+
+
+            <!-- Title -->
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h1 class="title-heading">Converting Audio To  Written Text</h1>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Features -->
+
+    <section id="features ">
+        <div class="row feature-row">
+
+            <div class="col-lg-4 col-md-12 feature-one">
+                <i class="fa-solid fa-circle-check icons"></i>
+                <h3 class="head">Easy to use.</h3>
+                <p class="data">The interface designed is very easy to use.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-12 feature-one">
+                <i class="fa-solid fa-bullseye icons"></i>
+                <h3 class="head">Adaptability</h3>
+                <p class="data">Runs on any browser of choice.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-12 feature-one">
+                <i class="fa-solid fa-heart icons"></i>
+                <h3 class="head">Can use anywhere, anytime!</h3>
+                <p class="data">It is user friendly and can be used anytime</p>
+            </div>
+
+        </div>
+    </section>
+
+     <!-- slides -->
+
+     <section id="slide">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- <img class="d-block w-100" src="..." alt="First slide"> -->
+                    <h2>Never trust the translation or interpretation of something without first trusting its interpreter</h2>
+
+                </div>
+                <div class="carousel-item">
+                    <!-- <img class="d-block w-100" src="..." alt="Second slide"> -->
+                    <h2 class="slide-text">“Machine learning will automate jobs that most people thought could only be done by people.” ~Dave Waters.</h2>
+
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+    <!-- visit -->
+
+    <section id="visit">
+
+        <h2>Two for one site</h2>
+
+
+        <!-- Cards -->
+        <div class="row ">
+            <div class="visit-column col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Speech2Text</h3>
+                    </div>
+                    <div class="card-body">
+                        <h2></h2>
+                        <p>This feature will convert speech to text with the help of ML model.</p>
+
+                        <button type="button" class="btn btn-lg btn-block btn-dark visit-btn"><a class="btn_anchor" href="translate">Lets Go!!</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="visit-column col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Translator</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <p>This Feature will convert text from one language to another language of your choice.</p>
+
+                        <button type="button" class="btn btn-lg btn-block btn-dark visit-btn"><a class="btn_anchor" href="translator">Lets Go!!</a></button>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="visit-column col-lg-4 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>last feature</h3>
+                    </div>
+                    <div class="card-body">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, quisquam.</p>
+
+                        <button type="button" class="btn btn-lg btn-block btn-dark visit-btn">Lets Go!!</button>
+                        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FeedBack -->
+    </section>
+    <!-- end of services -->
+    <!-- contact -->
+    <section class="contact" id="feedback">
+    <div class="section-center clearfix">
+        <!-- contact form -->
+        <article class="contact-form">
+        <h3 >Give us your FeedBack</h3>
+        <div>
+            <form action="https://formspree.io/f/mzbwyrog" method="POST">
+                <div class="form-group">
+                <!-- inputs -->
+                <input 
+                    type="text" 
+                    placeholder="name" 
+                    class="form-control" 
+                    name="name"
+                    />
+                <input 
+                    type="email" 
+                    placeholder="email" 
+                    class="form-control" 
+                    name="email" 
+                    />
+                <textarea name="message" 
+                class="form-control"
+                placeholder="message"
+                rows="5"></textarea>
+                    
+                </div>
+                <!-- button -->
+                <button type="submit" class="submit-btn btn">Submit</button>
+            </form>
+            
+        </div>
+        </article>
+    </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+        <p>© Copyright DontKnowMan</p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
